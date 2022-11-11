@@ -1,0 +1,15 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+.header {
+  display: flex;
+  min-height: 8.2rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+
+  &-hamburguer {
+    &_button:hover {
+      cursor: pointer;
+    }
+  }
+}

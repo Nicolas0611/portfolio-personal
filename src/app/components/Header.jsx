@@ -5,10 +5,12 @@ const Header = () => {
   return (
     <div className="header container">
       <div className="header-logo">
-        <img src={headerImages[0].image} />
+        <img src={headerImages[1].image} />
       </div>
       <div className="header-hamburguer">
-        <img src={headerImages[1].image} />
+        <button className="header-hamburguer_button">
+          <img src={headerImages[0].image} />
+        </button>
       </div>
     </div>
   );
