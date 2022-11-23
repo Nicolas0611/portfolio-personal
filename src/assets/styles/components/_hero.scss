@@ -1,0 +1,78 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.hero {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background: linear-gradient(99.03deg, #111827 -1%, #474747 92.31%);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1),
+    0px 23px 30px rgba(171, 236, 214, 0.2);
+  padding: 2rem;
+  margin: 0 0 4rem 0;
+  color: white;
+  border-radius: 4.4rem;
+  @include m.tabletMed {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: unset;
+    align-items: center;
+  }
+  &-3D {
+    display: none;
+
+    @include m.tabletMed {
+      display: block;
+      margin-right: 0 !important;
+      padding-right: 0;
+      grid-column: 2/3;
+    }
+    &_illustration {
+      margin: 0 auto;
+
+      width: 40rem !important;
+      height: 40rem !important;
+      @include m.desktopBig {
+        width: 60rem !important;
+        height: 60rem !important;
+      }
+    }
+  }
+  &-content {
+    @include m.tabletMed {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      padding-left: 4.5rem;
+    }
+  }
+  &-name {
+    font-weight: 400;
+    font-size: 2.2rem;
+    padding: 0 0 1rem 0;
+    margin: 0;
+    @include m.tabletMed {
+      text-align: unset;
+    }
+    @include m.desktopBig {
+      font-size: 2.5rem;
+    }
+  }
+  &-parragraph {
+    font-weight: 500;
+    font-size: 3.2rem;
+    margin: 0;
+    font-weight: 500;
+    @include m.tabletMed {
+      text-align: unset;
+    }
+    @include m.desktopBig {
+      width: 90%;
+      font-size: 3.8rem;
+    }
+    &_span {
+      background: linear-gradient(221.09deg, #0780da 10.71%, #08a3e5 97.41%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 700;
+    }
+  }
+}

@@ -1,2 +1,12 @@
 @use "../../base/variables" as v;
 @use "../../base/mixins" as m;
+
+.button-filled {
+  background: linear-gradient(221.09deg, #0780da 10.71%, #08a3e5 97.41%);
+  border-radius: 32px;
+  padding: 8px 36px;
+  width: 15.4rem;
+  height: 4.6rem;
+  font-size: 2rem;
+  color: white;
+}

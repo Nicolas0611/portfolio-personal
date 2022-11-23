@@ -14,8 +14,8 @@ const Footer = () => {
 
             <div className="footer-socials">
               {iconsArray.map((icon, index) => (
-                <a href={icon.link}>
-                  <FontAwesomeIcon key={index} icon={icon.icon} />
+                <a href={icon.link} key={index}>
+                  <FontAwesomeIcon icon={icon.icon} />
                 </a>
               ))}
             </div>
