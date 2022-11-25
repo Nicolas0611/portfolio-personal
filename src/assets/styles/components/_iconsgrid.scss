@@ -1,0 +1,14 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.icongrid {
+  color: white;
+  font-size: 2.5rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  @include m.tabletMed {
+    justify-content: flex-start;
+  }
+}

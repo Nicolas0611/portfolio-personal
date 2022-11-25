@@ -2,6 +2,7 @@
 @use "../base/mixins" as m;
 
 .hero {
+  position: relative;
   display: grid;
   grid-template-rows: 1fr 1fr;
   background: linear-gradient(99.03deg, #111827 -1%, #474747 92.31%);
@@ -73,6 +74,25 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
       font-weight: 700;
+    }
+  }
+  &-buttons {
+    padding-top: 4.2rem;
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    justify-content: center;
+    @include m.tabletMed {
+      justify-content: unset;
+    }
+  }
+  &-social {
+    position: absolute;
+    bottom: 30%;
+    left: 40%;
+    @include m.tabletMed {
+      bottom: 5%;
+      left: unset;
     }
   }
 }
