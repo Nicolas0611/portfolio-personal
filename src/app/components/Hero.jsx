@@ -20,7 +20,7 @@ const Hero = ({ title, illustration }) => {
           </p>
           <div className="hero-buttons">
             <FilledButton text="Contact" />
-            <LinkButton text="Download CV" />
+            <LinkButton text="Download CV" style="white" styleBg="white-bg" />
           </div>
         </div>
         <div className="hero-social">

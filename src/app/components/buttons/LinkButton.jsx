@@ -2,14 +2,14 @@ import React from "react";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const LinkButton = ({ text }) => {
+const LinkButton = ({ text, style, styleBg }) => {
   return (
     <div className="link">
-      <div className="link-button">
+      <div className={`link-button ${style}`}>
         <a>{text}</a>
         <FontAwesomeIcon icon={faArrowRight} />
       </div>
-      <div className="link-underline"></div>
+      <div className={`link-underline ${styleBg}`}></div>
     </div>
   );
 };
