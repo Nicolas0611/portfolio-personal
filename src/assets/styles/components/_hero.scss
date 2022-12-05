@@ -18,8 +18,7 @@
     align-items: center;
   }
   &-3D {
-    display: none;
-
+    display: block;
     @include m.tabletMed {
       display: block;
       margin-right: 0 !important;
@@ -28,9 +27,13 @@
     }
     &_illustration {
       margin: 0 auto;
+      width: 25rem !important;
+      height: 25rem !important;
+      @include m.tabletMed {
+        width: 40rem !important;
+        height: 40rem !important;
+      }
 
-      width: 40rem !important;
-      height: 40rem !important;
       @include m.desktopBig {
         width: 60rem !important;
         height: 60rem !important;

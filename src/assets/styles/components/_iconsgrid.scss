@@ -8,7 +8,9 @@
   gap: 2rem;
   align-items: center;
   justify-content: center;
+  display: none;
   @include m.tabletMed {
+    display: flex;
     justify-content: flex-start;
   }
 }
