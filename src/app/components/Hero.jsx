@@ -3,6 +3,7 @@ import Spline from "@splinetool/react-spline";
 import FilledButton from "./buttons/FilledButton";
 import LinkButton from "./buttons/LinkButton";
 import IconGrid from "./IconGrid";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Hero = ({ title, illustration }) => {
   return (
@@ -20,7 +21,12 @@ const Hero = ({ title, illustration }) => {
           </p>
           <div className="hero-buttons">
             <FilledButton text="Contact" />
-            <LinkButton text="Download CV" style="white" styleBg="white-bg" />
+            <LinkButton
+              text="Download CV"
+              style="white"
+              styleBg="white-bg"
+              icon={faArrowRight}
+            />
           </div>
         </div>
         <div className="hero-social">

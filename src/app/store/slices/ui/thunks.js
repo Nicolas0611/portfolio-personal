@@ -1,4 +1,4 @@
-import { setPokemons, startLoadingPokemons } from "./pokemonSlice";
+/* import { setPokemons, startLoadingPokemons } from "./uiSlice";
 import axios from "axios";
 
 export const getPokemons = (page = 0) => {
@@ -16,3 +16,4 @@ export const getPokemons = (page = 0) => {
       });
   };
 };
+ */

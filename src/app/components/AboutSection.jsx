@@ -1,4 +1,5 @@
 import React from "react";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const AboutSection = ({ title, ProfileImage, LinkButton }) => {
   return (
@@ -28,7 +29,12 @@ const AboutSection = ({ title, ProfileImage, LinkButton }) => {
             <div className="separator"></div>
           </div>
           <div className="about-button">
-            <LinkButton text="Download CV" style="black" styleBg="black-bg" />
+            <LinkButton
+              text="Download CV"
+              style="black"
+              styleBg="black-bg"
+              icon={faArrowRight}
+            />
           </div>
         </div>
       </div>

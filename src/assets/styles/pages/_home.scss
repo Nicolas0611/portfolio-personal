@@ -66,3 +66,62 @@
   flex-direction: column;
   gap: 2rem;
 }
+.tech {
+  background-color: #e0f2fe;
+  &-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &_icons {
+      color: white;
+      grid-template-columns: 1fr 1fr 1fr;
+      display: grid;
+      gap: 3rem;
+      @include m.tabletMed {
+        gap: 3rem;
+        display: flex;
+        flex-direction: row;
+      }
+      @include m.desktopBig {
+        gap: 6rem;
+        display: flex;
+        flex-direction: row;
+      }
+    }
+    &_title {
+      color: white;
+      margin: 3.5rem 0;
+      font-weight: 400;
+    }
+  }
+  &-container {
+    background: linear-gradient(221.09deg, #0780da 10.71%, #08a3e5 97.41%);
+    border-radius: 44px;
+    padding: 1.8rem 3.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 6.5rem;
+  }
+  &-title {
+    font-weight: 800;
+    font-size: 2.8rem;
+    margin-bottom: 1.1rem;
+    color: white;
+  }
+  &-section {
+    padding: 7.1rem 0;
+  }
+}
+
+.projects {
+  padding: 6.6rem 0;
+  &-title {
+    font-size: 5.6rem;
+  }
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+}

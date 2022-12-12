@@ -1,0 +1,25 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.tag {
+  max-width: max-content;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  &-title {
+    margin: 0;
+  }
+}
+.blue {
+  background-color: #9de1ff;
+}
+.yellow {
+  background-color: #fde68a;
+}
+.green {
+  background-color: #7bfdab;
+}
+.purple {
+  background-color: #d8afff;
+}
