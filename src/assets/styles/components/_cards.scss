@@ -4,7 +4,11 @@
 .card {
   max-width: 309px;
   &-title {
-    font-size: 38px;
+    font-size: 28px;
+    @include m.tabletMed {
+      font-size: 3rem;
+    }
+
     font-weight: 300;
     color: #111827;
   }
@@ -13,8 +17,12 @@
     gap: 1rem;
   }
   &-image {
-    max-width: 309px;
-    max-height: 285px;
+    max-width: 22.9rem;
+    max-height: 20.5rem;
+    @include m.tabletMed {
+      max-width: 30.9rem;
+      max-height: 28.5rem;
+    }
     padding-top: 2rem;
   }
   &-buttons {

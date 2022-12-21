@@ -39,12 +39,6 @@ export const BlogCard = ({ title, tags }) => {
           styleBg="black-bg"
           icon={faArrowRight}
         />
-        <LinkButton
-          text="GitHub"
-          style="black"
-          styleBg="black-bg"
-          icon={faArrowRight}
-        />
       </div>
     </div>
   );

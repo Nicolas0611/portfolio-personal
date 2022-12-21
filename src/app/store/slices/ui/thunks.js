@@ -1,19 +1,27 @@
-/* import { setPokemons, startLoadingPokemons } from "./uiSlice";
-import axios from "axios";
+import portfolioApi from "../../../api/portfolioApi";
+import { checkCredentials, getIndexContent } from "./uiSlice";
 
-export const getPokemons = (page = 0) => {
-  return async (dispatch, getState) => {
-    dispatch(startLoadingPokemons());
-    //TODO: realizar peticion http
-    await axios
-      .get(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${page * 10}`)
-      .then((response) => {
-        const { data } = response;
-        dispatch(setPokemons({ pokemons: data.results, nextPage: page + 1 }));
-      })
-      .catch(() => {
-        console.log("Error Data");
+export const getContent = (route) => {
+  let projects = [];
+  return async (dispatch) => {
+    dispatch(checkCredentials());
+    try {
+      const {
+        data: { data },
+      } = await portfolioApi.get(`${route}/?populate=*`);
+      console.log(data);
+
+      data.forEach((project) => {
+        projects.push({
+          id: project.id,
+          title: project.attributes.title,
+          img: project.attributes.thumbnail.data.attributes.url,
+          tech: project.attributes.tech.map((stack) => stack.Title),
+        });
       });
+      dispatch(getIndexContent(projects));
+    } catch (error) {
+      console.log(error);
+    }
   };
 };
- */

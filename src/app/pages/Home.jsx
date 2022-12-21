@@ -6,8 +6,13 @@ import LinkButton from "../components/buttons/LinkButton";
 import AboutSection from "../components/AboutSection";
 import TechSection from "../components/TechSection";
 import { BlogCard } from "../components/cards/BlogCard";
+import { useSelector, useDispatch } from "react-redux";
+import { getContent } from "../store/slices/ui/thunks";
+import { useEffect } from "react";
 
 const Home = () => {
+  const dispatch = useDispatch();
+
   const cardsMap = [
     {
       title: "AgricaPro",
@@ -30,6 +35,9 @@ const Home = () => {
       techStack: [{ title: "Node" }, { title: "API" }, { title: "React" }],
     },
   ];
+  useEffect(() => {
+    dispatch(getContent("projects"));
+  }, []);
 
   return (
     <Layout>
@@ -63,8 +71,12 @@ const Home = () => {
           <div className="container">
             <h2 className="projects-title ">Last Projects</h2>
             <div className="projects-grid">
-              {cardsMap.map((card) => (
-                <BlogCard title={card.title} tags={card.techStack} />
+              {cardsMap.map((card, index) => (
+                <BlogCard
+                  key={index}
+                  title={card.title}
+                  tags={card.techStack}
+                />
               ))}
             </div>
           </div>

@@ -118,10 +118,26 @@
   padding: 6.6rem 0;
   &-title {
     font-size: 5.6rem;
+    margin: 2rem 0;
   }
   &-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
+    @include m.tabletSmall {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include m.tabletMed {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include m.desktopMed {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include m.desktopBig {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
