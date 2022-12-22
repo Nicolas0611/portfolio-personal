@@ -30,3 +30,14 @@
     background-color: v.$background;
   }
 }
+
+.outline {
+  border: 0.3rem solid #08a3e5;
+  color: #08a3e5;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  &:hover {
+    cursor: pointer;
+  }
+}

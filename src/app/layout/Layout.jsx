@@ -7,7 +7,12 @@ const Layout = ({ children }) => {
     <div className="layout">
       <Header />
       {children}
-      <Footer />
+      <Footer
+        title={"Have any idea?"}
+        text={"Let's work together"}
+        mail={"nico.sierra13@gmail.com"}
+        label={"Developed by Nicolás Sierra"}
+      />
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const uiSlice = createSlice({
   name: "UI",
   initialState: {
-    status: "unkown", //not-authenticated - authenticated
+    status: "done", //not-authenticated - authenticated
     isOpen: false,
     projects: [],
   },
@@ -15,11 +15,11 @@ export const uiSlice = createSlice({
       state.projects = action.payload;
       state.status = "done";
     },
-    checkCredentials: (state) => {
+    checkData: (state) => {
       state.status = "checking";
     },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { openModal, getIndexContent, checkCredentials } = uiSlice.actions;
+export const { openModal, getIndexContent, checkData } = uiSlice.actions;

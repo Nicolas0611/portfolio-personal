@@ -15,15 +15,15 @@
   &-tags {
     display: flex;
     gap: 1rem;
+    padding-bottom: 2rem;
   }
   &-image {
-    max-width: 22.9rem;
-    max-height: 20.5rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 2rem;
     @include m.tabletMed {
       max-width: 30.9rem;
       max-height: 28.5rem;
     }
-    padding-top: 2rem;
   }
   &-buttons {
     padding-top: 2rem;

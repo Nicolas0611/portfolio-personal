@@ -140,4 +140,10 @@
       grid-template-columns: repeat(4, 1fr);
     }
   }
+  &-btn {
+    width: 100%;
+    display: flex;
+    padding-top: 4rem;
+    justify-content: center;
+  }
 }
