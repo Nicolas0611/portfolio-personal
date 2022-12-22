@@ -1,7 +1,7 @@
 import portfolioApi from "../../../api/portfolioApi";
 import { checkData, getIndexContent } from "./uiSlice";
 
-export const getContent = (route) => {
+export const getContent = (route, paginationLimit) => {
   let projects = [];
   return async (dispatch) => {
     dispatch(checkData());
@@ -10,7 +10,7 @@ export const getContent = (route) => {
         data: { data },
       } = await portfolioApi.get(
         //TODO PAGINATION WHEN CLICKING VIEW MORE LOAD MORE PROJECTS
-        `${route}/?populate=*&pagination[start]=0&pagination[limit]=4`
+        `${route}/?populate=*&pagination[start]=0&pagination[limit]=5`
       );
 
       data.forEach((project) => {
