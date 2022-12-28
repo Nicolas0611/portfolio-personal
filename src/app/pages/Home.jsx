@@ -6,6 +6,7 @@ import LinkButton from "../components/buttons/LinkButton";
 import AboutSection from "../components/AboutSection";
 import TechSection from "../components/TechSection";
 import ProjectSection from "../components/ProjectSection";
+import Waves from "../../assets/img/wave.svg";
 
 const Home = () => {
   return (
@@ -26,7 +27,7 @@ const Home = () => {
             LinkButton={LinkButton}
           />
         </div>
-        <div className="tech tech-section">
+        <section className="tech tech-section">
           <div className="container">
             <TechSection
               title={"TechStack and Skills"}
@@ -34,13 +35,14 @@ const Home = () => {
               subTitle2={"Product Design"}
             />
           </div>
-        </div>
+          <img className="wave" src={Waves} alt="wave image" />
+        </section>
 
-        <div className="projects projects-section">
+        <section className="projects projects-section">
           <div className="container">
             <ProjectSection title={"Last Projects"} />
           </div>
-        </div>
+        </section>
       </main>
     </Layout>
   );

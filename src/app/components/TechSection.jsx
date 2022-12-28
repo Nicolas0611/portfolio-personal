@@ -2,6 +2,7 @@ import React from "react";
 import { Bullet } from "../components/Bullet";
 import { productStackArray, techStackArray } from "../library/importIcons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const TechSection = ({ title, subTitle1, subTitle2 }) => {
   return (
     <div className="tech-container">

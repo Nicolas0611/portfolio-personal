@@ -3,6 +3,7 @@ import { checkData, getIndexContent } from "./uiSlice";
 
 export const getContent = (route, paginationLimit) => {
   let projects = [];
+
   return async (dispatch) => {
     dispatch(checkData());
     try {
@@ -10,7 +11,7 @@ export const getContent = (route, paginationLimit) => {
         data: { data },
       } = await portfolioApi.get(
         //TODO PAGINATION WHEN CLICKING VIEW MORE LOAD MORE PROJECTS
-        `${route}/?populate=*&pagination[start]=0&pagination[limit]=5`
+        `${route}/?populate=*&pagination[start]=0&pagination[limit]=${paginationLimit}`
       );
 
       data.forEach((project) => {

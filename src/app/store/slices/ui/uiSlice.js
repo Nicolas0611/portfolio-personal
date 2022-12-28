@@ -6,6 +6,7 @@ export const uiSlice = createSlice({
     status: "done", //not-authenticated - authenticated
     isOpen: false,
     projects: [],
+    pageLimit: 4,
   },
   reducers: {
     openModal: (state /* action */) => {
@@ -18,8 +19,13 @@ export const uiSlice = createSlice({
     checkData: (state) => {
       state.status = "checking";
     },
+    pageLimitContent: (state) => {
+      state.pageLimit = state.pageLimit + 4;
+      state.status = "checking";
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { openModal, getIndexContent, checkData } = uiSlice.actions;
+export const { openModal, getIndexContent, checkData, pageLimitContent } =
+  uiSlice.actions;
