@@ -7,6 +7,7 @@ export const uiSlice = createSlice({
     isOpen: false,
     projects: [],
     pageLimit: 4,
+    filteredType: "All",
   },
   reducers: {
     openModal: (state /* action */) => {
@@ -23,9 +24,23 @@ export const uiSlice = createSlice({
       state.pageLimit = state.pageLimit + 4;
       state.status = "checking";
     },
+    filterContent: (state, action) => {
+      //Filtrar desde el front
+      state.filteredType = action.payload;
+
+      //Modificando el objeto actual
+      /*     state.projects = state.projects.filter((project) =>
+        project.tech.includes(action.payload)
+      ); */
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { openModal, getIndexContent, checkData, pageLimitContent } =
-  uiSlice.actions;
+export const {
+  openModal,
+  getIndexContent,
+  checkData,
+  pageLimitContent,
+  filterContent,
+} = uiSlice.actions;

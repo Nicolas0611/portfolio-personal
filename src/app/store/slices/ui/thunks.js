@@ -10,8 +10,7 @@ export const getContent = (route, paginationLimit) => {
       const {
         data: { data },
       } = await portfolioApi.get(
-        //TODO PAGINATION WHEN CLICKING VIEW MORE LOAD MORE PROJECTS
-        `${route}/?populate=*&pagination[start]=0&pagination[limit]=${paginationLimit}`
+        `/${route}/?populate=*&pagination[start]=0&pagination[limit]=${paginationLimit}`
       );
 
       data.forEach((project) => {

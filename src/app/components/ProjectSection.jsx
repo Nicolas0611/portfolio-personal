@@ -5,9 +5,13 @@ import { BlogCard } from "./cards/BlogCard";
 import { useDispatch } from "react-redux";
 import { pageLimitContent } from "../store/slices/ui/uiSlice";
 import { RotatingLines } from "react-loader-spinner";
+import Selector from "./Selector";
 
 const ProjectSection = ({ title }) => {
-  const { startGetContent, projects, limit, status } = useStrapiService();
+  const options = ["All", "React", "UX", "UI", "Javascript"];
+
+  const { startGetContent, startFiltering, projects, limit, status, category } =
+    useStrapiService();
   const [state, setState] = useState(false);
   const dispatch = useDispatch();
 
@@ -24,16 +28,33 @@ const ProjectSection = ({ title }) => {
   return (
     <>
       <h2 className="projects-title ">{title}</h2>
+      <Selector
+        startFiltering={startFiltering}
+        options={options}
+        label={"Filter By:"}
+      />
       <div className="projects-grid">
-        {projects.map((project) => (
-          <BlogCard
-            key={project.id}
-            title={project.title}
-            tags={project.tech}
-            img={project.img}
-            href={project.href}
-          />
-        ))}
+        {projects.map((project) =>
+          category.trim() === "All" ? (
+            <BlogCard
+              key={project.id}
+              title={project.title}
+              tags={project.tech}
+              img={project.img}
+              href={project.href}
+            />
+          ) : (
+            project.tech.includes(category) && (
+              <BlogCard
+                key={project.id}
+                title={project.title}
+                tags={project.tech}
+                img={project.img}
+                href={project.href}
+              />
+            )
+          )
+        )}
       </div>
       <div
         className="projects-btn"

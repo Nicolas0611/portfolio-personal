@@ -1,0 +1,11 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+.selector {
+  &-label {
+    padding-right: 1.8rem;
+  }
+  &-dropdown {
+    border: 1px solid #08a3e5;
+    border-radius: 1rem;
+  }
+}
