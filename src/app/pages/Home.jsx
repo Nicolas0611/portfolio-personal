@@ -12,22 +12,22 @@ const Home = () => {
   return (
     <Layout>
       <main className="home">
-        <div className=" container hero-section">
+        <section id="hero" className=" container hero-section">
           <Hero
             title={"Hi, I'm Nicolás"}
             illustration={
               "https://prod.spline.design/IQG953S8-skVBcXx/scene.splinecode"
             }
           />
-        </div>
-        <div className="container about about-section">
+        </section>
+        <section id="about" className="container about about-section">
           <AboutSection
             title={"About me"}
             ProfileImage={ProfileImage}
             LinkButton={LinkButton}
           />
-        </div>
-        <section className="tech tech-section">
+        </section>
+        <section id="skills" className="tech tech-section">
           <div className="container">
             <TechSection
               title={"TechStack and Skills"}
@@ -38,7 +38,7 @@ const Home = () => {
           <img className="wave" src={Waves} alt="wave image" />
         </section>
 
-        <section className="projects projects-section">
+        <section id="projects" className="projects projects-section">
           <div className="container">
             <ProjectSection title={"Last Projects"} />
           </div>

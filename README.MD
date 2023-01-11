@@ -1,1 +1,3 @@
-TODO: Change Skills bottom and top design with waves.
+TODO:
+INTERNAL PAGE FOR EACH PROJECT TEMPLATE.
+MENU COMPONENT

@@ -6,6 +6,7 @@ const portfolioApi = axios.create({
   baseURL: VITE_API_URL,
 });
 
+console.log(VITE_API_URL);
 //tODO CONFIGURAR INTERCEPTORES
 portfolioApi.interceptors.request.use((config) => {
   config.headers = {

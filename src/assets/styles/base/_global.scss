@@ -48,3 +48,12 @@ button[disabled] {
   background-color: #cccccc;
   color: #666666;
 }
+
+.close-menu {
+  opacity: 0;
+}
+
+.open-menu {
+  opacity: 100;
+  transition: opacity 1s;
+}

@@ -4,9 +4,16 @@
 .button-filled {
   background: linear-gradient(221.09deg, #0780da 10.71%, #08a3e5 97.41%);
   border-radius: 32px;
-  padding: 8px 36px;
-  width: 15.4rem;
+  padding: 8px 12px;
+  width: 12.4rem;
   height: 4.6rem;
+  & > a {
+    font-size: 1.8rem;
+  }
+  @include m.tabletMed {
+    width: 15.4rem;
+    height: 4.6rem;
+  }
   font-size: 2rem;
   color: white;
 }

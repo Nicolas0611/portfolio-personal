@@ -1,10 +1,64 @@
 .menu {
-  position: absolute;
-  background-color: #10141ead;
+  background-color: white;
   padding: 10rem;
-  transform: translate(50%, 50%);
-  top: 25%;
-  right: 50%;
-
+  width: 40%;
+  min-width: 30rem;
+  min-height: 35rem;
   z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 20px 25px -5px rgba(0, 0, 0, 0.02),
+    0px 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-radius: 18px;
+  font-weight: 500;
+  &-overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.704);
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0%;
+    right: 0%;
+  }
+  &-link {
+    font-size: 2.5rem;
+  }
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+}
+
+.Orange {
+  color: #f59e0b;
+  &:visited {
+    color: #f59e0b !important;
+  }
+}
+.Blue {
+  color: #38bdf8;
+  &:visited {
+    color: #38bdf8 !important;
+  }
+}
+.Green {
+  color: #34d399;
+  &:visited {
+    color: #34d399 !important;
+  }
+}
+.Red {
+  color: #d3345a;
+  &:visited {
+    color: #d3345a !important;
+  }
+}
+
+.fade {
+  z-index: 105;
 }
