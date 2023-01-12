@@ -3,6 +3,7 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,
 *::before,
@@ -47,13 +48,4 @@ button[disabled] {
   border: 1px solid #999999;
   background-color: #cccccc;
   color: #666666;
-}
-
-.close-menu {
-  opacity: 0;
-}
-
-.open-menu {
-  opacity: 100;
-  transition: opacity 1s;
 }

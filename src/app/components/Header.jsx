@@ -19,10 +19,8 @@ const Header = () => {
           onClick={() => dispatch(openModal())}
         >
           <img src={headerImages[0].image} />
-          <div>
-            <Menu isOpen={isOpen} />
-          </div>
         </button>
+        <Menu isOpen={isOpen} />
       </div>
     </div>
   );

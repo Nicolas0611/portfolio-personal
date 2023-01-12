@@ -10,8 +10,11 @@ export const uiSlice = createSlice({
     filteredType: "All",
   },
   reducers: {
-    openModal: (state /* action */) => {
-      state.isOpen = !state.isOpen;
+    openModal: (state) => {
+      state.isOpen = true;
+    },
+    closeModal: (state) => {
+      state.isOpen = false;
     },
     getIndexContent: (state, action) => {
       state.projects = action.payload;
@@ -43,4 +46,5 @@ export const {
   checkData,
   pageLimitContent,
   filterContent,
+  closeModal,
 } = uiSlice.actions;
