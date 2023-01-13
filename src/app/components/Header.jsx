@@ -9,18 +9,20 @@ const Header = () => {
   const { isOpen } = useSelector((state) => state.ui);
 
   return (
-    <div className="header container">
-      <div className="header-logo">
-        <img src={headerImages[1].image} />
-      </div>
-      <div className="header-hamburguer">
-        <button
-          className="header-hamburguer_button"
-          onClick={() => dispatch(openModal())}
-        >
-          <img src={headerImages[0].image} />
-        </button>
-        <Menu isOpen={isOpen} />
+    <div className="header">
+      <div className="header-container">
+        <div className="header-logo">
+          <img src={headerImages[1].image} />
+        </div>
+        <div className="header-hamburguer">
+          <button
+            className="header-hamburguer_button"
+            onClick={() => dispatch(openModal())}
+          >
+            <img src={headerImages[0].image} />
+          </button>
+          <Menu isOpen={isOpen} />
+        </div>
       </div>
     </div>
   );
