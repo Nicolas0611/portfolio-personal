@@ -1,29 +1,55 @@
 import React from "react";
 import { Bullet } from "../components/Bullet";
-import { productStackArray, techStackArray } from "../library/importIcons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Skills from "./Skills";
+import Academic from "./Academic";
+import Experience from "./Experience";
+import { useState } from "react";
+const bulletProperties = [
+  {
+    title: "👍 Skills",
+    id: "skills",
+  },
+  {
+    title: "💼 Experience",
+    id: "experience",
+  },
+  {
+    title: "💥 Academic",
 
-const TechSection = ({ title, subTitle1, subTitle2 }) => {
+    id: "academic",
+  },
+];
+const TechSection = () => {
+  const [tab, setTab] = useState("skills");
+  let currentTab = tab;
   return (
     <div className="tech-container">
-      <Bullet title={"👍 Skills"} />
-      <p className="tech-title">{title}</p>
-      <div className="tech-stack">
-        <h3 className="tech-stack_title">{subTitle1}</h3>
-
-        <div className="tech-stack_icons">
-          {techStackArray.map((icon, index) => (
-            <FontAwesomeIcon size="4x" key={index} icon={icon.icon} />
-          ))}
-        </div>
-
-        <h3 className="tech-stack_title">{subTitle2}</h3>
-        <div className="tech-stack_icons">
-          {productStackArray.map((icon, index) => (
-            <img key={index} src={icon.icon} />
-          ))}
-        </div>
+      <div className="bullet-container">
+        {bulletProperties.map((bullet) => (
+          <div
+            className="bullet-button"
+            key={bullet.id}
+            onClick={() => {
+              setTab(bullet.id);
+            }}
+          >
+            <Bullet title={bullet.title} />
+          </div>
+        ))}
       </div>
+      {currentTab === "skills" ? (
+        <Skills
+          title={"TechStack and Skills"}
+          subTitle1={"Development Skills"}
+          subTitle2={"Product Design"}
+        />
+      ) : currentTab === "experience" ? (
+        <Experience />
+      ) : currentTab === "academic" ? (
+        <Academic />
+      ) : (
+        <Skills />
+      )}
     </div>
   );
 };

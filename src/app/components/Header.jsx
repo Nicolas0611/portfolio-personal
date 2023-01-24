@@ -3,7 +3,7 @@ import { headerImages } from "../library/importImages";
 import { useSelector, useDispatch } from "react-redux";
 import { openModal } from "../store/slices/ui/uiSlice";
 import Menu from "./Menu";
-import FadeIn from "react-fade-in";
+
 const Header = () => {
   const dispatch = useDispatch();
   const { isOpen } = useSelector((state) => state.ui);
