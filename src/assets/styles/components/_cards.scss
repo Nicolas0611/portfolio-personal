@@ -31,3 +31,20 @@
     gap: 2rem;
   }
 }
+.cardLarge {
+  width: 80%;
+  background-color: #0171ba;
+  padding: 0.1rem 5.2rem;
+  color: white;
+  border-radius: 2rem;
+  &-description {
+    margin: 0;
+  }
+  &-timeframe {
+    display: flex;
+    justify-content: space-between;
+    &_timeline {
+      font-weight: 400;
+    }
+  }
+}

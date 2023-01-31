@@ -44,9 +44,9 @@ const TechSection = () => {
           subTitle2={"Product Design"}
         />
       ) : currentTab === "experience" ? (
-        <Experience />
+        <Experience title={"Experience"} />
       ) : currentTab === "academic" ? (
-        <Academic />
+        <Academic title={"Academic"} />
       ) : (
         <Skills />
       )}

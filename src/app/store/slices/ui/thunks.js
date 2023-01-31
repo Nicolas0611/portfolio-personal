@@ -1,5 +1,5 @@
-import portfolioApi from "../../../api/portfolioApi";
-import { checkData, getIndexContent } from "./uiSlice";
+import { getApiResponse } from "../../../helpers/getApiResponse";
+import { checkData, getIndexContent, getExperiences } from "./uiSlice";
 
 export const getContent = (route, paginationLimit) => {
   let projects = [];
@@ -9,9 +9,7 @@ export const getContent = (route, paginationLimit) => {
     try {
       const {
         data: { data },
-      } = await portfolioApi.get(
-        `/${route}/?populate=*&pagination[start]=0&pagination[limit]=${paginationLimit}`
-      );
+      } = await getApiResponse(route, paginationLimit);
 
       data.forEach((project) => {
         projects.push({
@@ -23,6 +21,31 @@ export const getContent = (route, paginationLimit) => {
         });
       });
       dispatch(getIndexContent(projects));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+export const getExperience = (route, paginationLimit) => {
+  let experiences = [];
+
+  return async (dispatch) => {
+    dispatch(checkData());
+    try {
+      const {
+        data: { data },
+      } = await getApiResponse(route, paginationLimit);
+      data.forEach((project) => {
+        experiences.push({
+          id: project.id,
+          title: project.attributes.title,
+          description: project.attributes.description,
+          duration: project.attributes.duration,
+          timerange: project.attributes.timerange,
+        });
+      });
+
+      dispatch(getExperiences(experiences));
     } catch (error) {
       console.log(error);
     }

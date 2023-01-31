@@ -107,7 +107,7 @@
   &-title {
     font-weight: 800;
     font-size: 2.8rem;
-    margin-bottom: 1.1rem;
+    margin: 3rem;
     color: white;
   }
   &-section {
@@ -153,11 +153,10 @@
     justify-content: center;
   }
 }
-.wave {
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  @include m.tabletMed {
-    top: 95%;
-  }
+.experience {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
 }

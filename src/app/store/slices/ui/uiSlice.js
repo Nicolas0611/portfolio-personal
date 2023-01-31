@@ -6,6 +6,7 @@ export const uiSlice = createSlice({
     status: "done", //not-authenticated - authenticated
     isOpen: false,
     projects: [],
+    experiences: [],
     pageLimit: 4,
     filteredType: "All",
   },
@@ -18,6 +19,10 @@ export const uiSlice = createSlice({
     },
     getIndexContent: (state, action) => {
       state.projects = action.payload;
+      state.status = "done";
+    },
+    getExperiences: (state, action) => {
+      state.experiences = action.payload;
       state.status = "done";
     },
     checkData: (state) => {
@@ -47,4 +52,5 @@ export const {
   pageLimitContent,
   filterContent,
   closeModal,
+  getExperiences,
 } = uiSlice.actions;
